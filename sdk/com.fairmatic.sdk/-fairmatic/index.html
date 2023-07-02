@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FMSDK</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="../../../images/logo-icon.svg">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/style.css" rel="Stylesheet">
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>FMSDK</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.fairmatic.sdk/Fairmatic///PointingToDeclaration//165651098">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.fairmatic.sdk</a><span class="delimiter">/</span><span class="current">Fairmatic</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Fairmatic</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Fairmatic</a></div><p class="paragraph">Fairmatic class is the entry point into the Fairmatic SDK. Other than setup, all methods are optional to call by the application. They are also no-ops in case setup has not been called. All methods are threadsafe.</p><p class="paragraph">Applications which want to record Fairmatic insurance periods for a driver may use this API. All drives (automatically detected or manually started) when a period is in progress will be tagged with the period id. This period id will be made available in the reports and API that Fairmatic provides via Fairmatic.</p><p class="paragraph">Only one period may be active at a time. To switch the Fairmatic insurance period, the application can call the relevant startPeriod method directly. Switching periods or calling stopPeriod stops any active drives (automatic or manual). A drive with multiple insurance periods will be split into multiple trips for different insurance periods.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1479050233%2FFunctions%2F165651098" anchor-label="getActiveDriveInfo" id="1479050233%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-active-drive-info.html"><span>get</span><wbr></wbr><span>Active</span><wbr></wbr><span>Drive</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1479050233%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-active-drive-info.html"><span class="token function">getActiveDriveInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-active-drive-info/index.html">ActiveDriveInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get info on the currently active drive. If sdk is not setup or if no drive is in progress, null is returned.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-416996144%2FFunctions%2F165651098" anchor-label="getBuildVersion" id="-416996144%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-build-version.html"><span>get</span><wbr></wbr><span>Build</span><wbr></wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-416996144%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-build-version.html"><span class="token function">getBuildVersion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns an identifier which can be used to identify this SDK build.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-355795599%2FFunctions%2F165651098" anchor-label="getEventSupportForDevice" id="-355795599%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-event-support-for-device.html"><span>get</span><wbr></wbr><span>Event</span><wbr></wbr><span>Support</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Device</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-355795599%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-event-support-for-device.html"><span class="token function">getEventSupportForDevice</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.fairmatic.sdk.classes/-fairmatic-event-type/index.html">FairmaticEventType</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Check whether the fairmatic event types are supported or not on this device</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1585562170%2FFunctions%2F165651098" anchor-label="getFairmaticSettings" id="-1585562170%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-fairmatic-settings.html"><span>get</span><wbr></wbr><span>Fairmatic</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1585562170%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-fairmatic-settings.html"><span class="token function">getFairmaticSettings</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticSettingsCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-settings-callback/index.html">FairmaticSettingsCallback</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Get the current state of settings affecting the Fairmatic SDK's normal operation. If the SDK is set up, this async method returns a <a href="../../com.fairmatic.sdk.classes/-fairmatic-settings/index.html">com.fairmatic.sdk.classes.FairmaticSettings</a> object that contains a list of errors and warnings that are affecting Fairmatic's ability to detect trips and perform other tasks.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1400414625%2FFunctions%2F165651098" anchor-label="isAccidentDetectionSupported" id="-1400414625%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-accident-detection-supported.html"><span>is</span><wbr></wbr><span>Accident</span><wbr></wbr><span>Detection</span><wbr></wbr><span><span>Supported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1400414625%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-accident-detection-supported.html"><span class="token function">isAccidentDetectionSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Is Fairmatic collision detection supported on this device?</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1606207510%2FFunctions%2F165651098" anchor-label="isSDKSetup" id="-1606207510%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-s-d-k-setup.html"><span>is</span><wbr></wbr><span><span>SDKSetup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1606207510%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-s-d-k-setup.html"><span class="token function">isSDKSetup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Is the Fairmatic SDK already setup?</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="371913790%2FFunctions%2F165651098" anchor-label="isValidInputParameter" id="371913790%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-valid-input-parameter.html"><span>is</span><wbr></wbr><span>Valid</span><wbr></wbr><span>Input</span><wbr></wbr><span><span>Parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371913790%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-valid-input-parameter.html"><span class="token function">isValidInputParameter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks whether the string passed to the SDK is valid. String parameters cannot be null or empty. Unless documented otherwise, strings parameters to the SDK cannot contain any of the following characters - &quot;?&quot;, &quot; &quot;, &quot;&&quot;, &quot;/&quot;, &quot;\&quot;, &quot;;&quot;, &quot;#&quot;, &quot;\n&quot;</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-93108934%2FFunctions%2F165651098" anchor-label="setFairmaticDriveDetectionMode" id="-93108934%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-fairmatic-drive-detection-mode.html"><span>set</span><wbr></wbr><span>Fairmatic</span><wbr></wbr><span>Drive</span><wbr></wbr><span>Detection</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-93108934%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-fairmatic-drive-detection-mode.html"><span class="token function">setFairmaticDriveDetectionMode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticDriveDetectionMode<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-drive-detection-mode/index.html">FairmaticDriveDetectionMode</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Use this method to change the <a href="../../com.fairmatic.sdk.classes/-fairmatic-drive-detection-mode/index.html">com.fairmatic.sdk.classes.FairmaticDriveDetectionMode</a> after SDK is already setup. Applications which do not want the SDK to continuously track drives in background should set this value to AUTO_OFF. With this, the application needs to call <a href="start-drive.html">startDrive</a> method to record drives. In case the application wants to enable auto drive detection only for a fixed duration (like when the driver is on-duty), use this method to change the mode to AUTO_ON for that period and set it back to AUTO_OFF (once the driver goes off-duty). Once setup finishes, the <a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">com.fairmatic.sdk.classes.FairmaticOperationCallback</a> is called (if provided) with the result of the setup operation. Callback will be made on calling thread if it's Looper is already prepared, else the callback is made on the Main Thread.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="71393604%2FFunctions%2F165651098" anchor-label="setup" id="71393604%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="setup.html"><span><span>setup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="71393604%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="setup.html"><span class="token function">setup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticConfiguration<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-configuration/index.html">FairmaticConfiguration</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticBroadcastReceiver<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-broadcast-receiver/index.html">FairmaticBroadcastReceiver</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fairmaticNotificationProvider<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-notification-provider/index.html">FairmaticNotificationProvider</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Setup the Fairmatic SDK with a configuration and a intent service for SDK callbacks. This will start tracking the phone's movements to track any driving activity. The application should call this method before anything else in the Fairmatic SDK.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-593626220%2FFunctions%2F165651098" anchor-label="startDrive" id="-593626220%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-drive.html"><span>start</span><wbr></wbr><span><span>Drive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-593626220%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-drive.html"><span class="token function">startDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">trackingId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Manually start recording a drive. For applications which want to manually start recording drives(as opposed to automatic detection that the framework does) this method may be called.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1231177388%2FFunctions%2F165651098" anchor-label="startDriveWithPeriod1" id="-1231177388%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-drive-with-period1.html"><span>start</span><wbr></wbr><span>Drive</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Period1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1231177388%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-drive-with-period1.html"><span class="token function">startDriveWithPeriod1</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Start a drive in Fairmatic insurance period 1. A manual trip with trackingId com.fairmatic.sdk.internal will be started immediately.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1897644486%2FFunctions%2F165651098" anchor-label="startDriveWithPeriod2" id="-1897644486%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-drive-with-period2.html"><span>start</span><wbr></wbr><span>Drive</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Period2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1897644486%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-drive-with-period2.html"><span class="token function">startDriveWithPeriod2</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">trackingId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Start Fairmatic insurance period 2 in the SDK. A manual trip with the given trackingId will be started immediately. The entire duration in this period will be recorded as a single trip. If period 2 is already in progress with the same trackingId, this call will be a no-op.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-611162181%2FFunctions%2F165651098" anchor-label="startDriveWithPeriod3" id="-611162181%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-drive-with-period3.html"><span>start</span><wbr></wbr><span>Drive</span><wbr></wbr><span>With</span><wbr></wbr><span><span>Period3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611162181%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-drive-with-period3.html"><span class="token function">startDriveWithPeriod3</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">trackingId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Start Fairmatic insurance period 3 in the SDK. A manual trip with the given trackingId will be started immediately. The entire duration in this period will be recorded as a single trip. If period 3 is already in progress with the same trackingId, this call will be a no-op.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="277387894%2FFunctions%2F165651098" anchor-label="startSession" id="277387894%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-session.html"><span>start</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277387894%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-session.html"><span class="token function">startSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-result/index.html">FairmaticOperationResult</a></div><div class="brief "><p class="paragraph">Start a session in the SDK. Applications which want to record several user's drives as a session may use this call. All drives (automatically detected or manually started) when a session is in progress will be tagged with the session id. If a drive is already on when this call is made, that drive will not belong to this session. This session id will be made available in the reports and API that Fairmatic provides.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="290719636%2FFunctions%2F165651098" anchor-label="stopManualDrive" id="290719636%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-manual-drive.html"><span>stop</span><wbr></wbr><span>Manual</span><wbr></wbr><span><span>Drive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290719636%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="stop-manual-drive.html"><span class="token function">stopManualDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stop the currently active manually started drive. The <a href="start-drive.html">startDrive</a> and stopManualDrive calls are not counted. i.e stopManualDrive will stop a manually started drive irrespective of how many times <a href="start-drive.html">startDrive</a> is called.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1324097915%2FFunctions%2F165651098" anchor-label="stopPeriod" id="1324097915%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-period.html"><span>stop</span><wbr></wbr><span><span>Period</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1324097915%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="stop-period.html"><span class="token function">stopPeriod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stop currently ongoing Fairmatic insurance period if any. Ongoing trips will be stopped and auto trip detection is turned off.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1321705515%2FFunctions%2F165651098" anchor-label="stopSession" id="1321705515%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-session.html"><span>stop</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1321705515%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="stop-session.html"><span class="token function">stopSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-result/index.html">FairmaticOperationResult</a></div><div class="brief "><p class="paragraph">Stop currently ongoing session. No-op if no session is ongoing. Trips that start after this call do not belong to the session. Ongoing trips at the time of this call will continue to belong to the session that was just stopped.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1371044068%2FFunctions%2F165651098" anchor-label="teardown" id="-1371044068%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="teardown.html"><span><span>teardown</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371044068%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="teardown.html"><span class="token function">teardown</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Shuts down the Fairmatic framework. This may be called if the client code wishes to turn off the Fairmatic framework to isolate the operations that the application is doing. This is a no-op if <a href="setup.html">setup</a> has not been called.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1348337462%2FFunctions%2F165651098" anchor-label="triggerMockAccident" id="1348337462%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trigger-mock-accident.html"><span>trigger</span><wbr></wbr><span>Mock</span><wbr></wbr><span><span>Accident</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1348337462%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="trigger-mock-accident.html"><span class="token function">triggerMockAccident</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticAccidentConfidence<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-accident-confidence/index.html">FairmaticAccidentConfidence</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="trigger-mock-accident.html"><span class="token function">triggerMockAccident</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">accidentConfiguration<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-mock-accident-configuration/index.html">FairmaticMockAccidentConfiguration</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Triggers a fake accident. A fake accident will be invoked on the FairmaticListener after this function is called. Requires that the Fairmatic SDK is setup and a trip is in progress.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1254923264%2FFunctions%2F165651098" anchor-label="uploadAllDebugDataAndLogs" id="1254923264%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="upload-all-debug-data-and-logs.html"><span>upload</span><wbr></wbr><span>All</span><wbr></wbr><span>Debug</span><wbr></wbr><span>Data</span><wbr></wbr><span>And</span><wbr></wbr><span><span>Logs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1254923264%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="upload-all-debug-data-and-logs.html"><span class="token function">uploadAllDebugDataAndLogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-result/index.html">FairmaticOperationResult</a></div><div class="brief "><p class="paragraph">Allows an application to trigger a bulk upload of all SDK data on the device to Fairmatic for debugging purposes. This uploads historical data and logs on the device. WARNING: This will cause significant battery drain on the device. It will also use significant upload bandwidth to upload this data.**</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1272879527%2FFunctions%2F165651098" anchor-label="wipeOut" id="-1272879527%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="wipe-out.html"><span>wipe</span><wbr></wbr><span><span>Out</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1272879527%2FFunctions%2F165651098"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="wipe-out.html"><span class="token function">wipeOut</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">fairmaticOperationCallback<span class="token operator">: </span><a href="../../com.fairmatic.sdk.classes/-fairmatic-operation-callback/index.html">FairmaticOperationCallback</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Wipe out all the data that fairmatic keeps locally on the device. When Fairmatic SDK is torn down, trip data that is locally persisted continues to remain persisted. The data will be uploaded when SDK setup is called at a later time. Wipeout should be used when the application wants to remove all traces of Fairmatic on the device. Data cannot be recovered after this call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>(c) 2023 Fairmatic</span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
